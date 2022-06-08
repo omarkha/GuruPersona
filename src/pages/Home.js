@@ -4,6 +4,7 @@ import Images from "../images/index";
 const Home = () => {
     return (
         <div className="home-page">
+            <h1>Welcome Home!</h1>
             <article>
                 <img src={Images.logo_1} />
                 <div>
