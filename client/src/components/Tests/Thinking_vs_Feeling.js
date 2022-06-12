@@ -5,7 +5,8 @@ import Results from "../Results_TF";
 const Thinking_vs_Feeling = () => {
   const questions = [
     {
-      question: "I like to live in the present moment",
+      question:
+        "I like to live in the present moment or the past more than I like to think about the future",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -15,7 +16,8 @@ const Thinking_vs_Feeling = () => {
       ],
     },
     {
-      question: "I like to ponder the future",
+      question:
+        "I like to ponder the future rather than think about the past or focus on the present moment",
       answers: [
         { id: 0, intuition: 1, sensing: 5 },
         { id: 1, intuition: 2, sensing: 4 },
@@ -67,7 +69,7 @@ const Thinking_vs_Feeling = () => {
     },
     {
       question:
-        "I pay attention to the concrete physical facts when I’m perceiving the world around me",
+        "I pay attention or focus on the concrete physical facts when I’m perceiving the world around me",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -142,7 +144,7 @@ const Thinking_vs_Feeling = () => {
     },
     {
       question:
-        "I pay attention to sensory facts about other people more than intuitive patterns",
+        "I pay attention or focus on sensory facts about other people more than intuitive patterns (such as their looks, financial status, possessions..etc)",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -153,7 +155,7 @@ const Thinking_vs_Feeling = () => {
     },
     {
       question:
-        "I pay attention to intuitive patterns about other people more than sensory facts",
+        "I pay attention or focus on intuitive patterns about other people more than sensory facts (such as their nature, mindset, future, mental behaviors...etc.)",
       answers: [
         { id: 0, intuition: 1, sensing: 5 },
         { id: 1, intuition: 2, sensing: 4 },

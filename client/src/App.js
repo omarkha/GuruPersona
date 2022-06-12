@@ -18,7 +18,6 @@ function App() {
       <div className="App">
         <NavBar />
         <Header />
-        <img className="background-image" src={Images.logo_2} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

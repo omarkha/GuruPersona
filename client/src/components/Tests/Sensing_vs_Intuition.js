@@ -5,7 +5,8 @@ import Results_SN from "../Results_SN";
 const Sensing_vs_Intuition = () => {
   const questions = [
     {
-      question: "I like to live in the present moment",
+      question:
+        "I like to live in the present moment or the past more than I like to think about the future",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -15,7 +16,8 @@ const Sensing_vs_Intuition = () => {
       ],
     },
     {
-      question: "I like to ponder the future",
+      question:
+        "I like to think about the future rather than focus on the present moment or think about the past",
       answers: [
         { id: 0, intuition: 1, sensing: 5 },
         { id: 1, intuition: 2, sensing: 4 },
@@ -56,7 +58,7 @@ const Sensing_vs_Intuition = () => {
     },
     {
       question:
-        "I think about abstract things when I’m perceiving the world around me",
+        "I think about abstract things when I’m trying to figure out the world around me",
       answers: [
         { id: 0, intuition: 1, sensing: 5 },
         { id: 1, intuition: 2, sensing: 4 },
@@ -67,7 +69,7 @@ const Sensing_vs_Intuition = () => {
     },
     {
       question:
-        "I pay attention to the concrete physical facts when I’m perceiving the world around me",
+        "I pay attention or focus on the concrete physical facts when I’m perceiving the world around me",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -98,7 +100,7 @@ const Sensing_vs_Intuition = () => {
     },
     {
       question:
-        "I prefer to ponder the meaning behind Abstract Artwork rather than appreciate the Aethetical Beauty of it",
+        "I prefer to ponder the meaning behind Artwork rather than merely appreciating it for it's Aethetical Beauty",
       answers: [
         { id: 0, intuition: 1, sensing: 5 },
         { id: 1, intuition: 2, sensing: 4 },
@@ -109,7 +111,7 @@ const Sensing_vs_Intuition = () => {
     },
     {
       question:
-        "I prefer to enjoy the Aesthetic Beauty of Artwork rather than delving into the meaning behind it",
+        "I prefer to just enjoy the Aesthetic Beauty of Artwork rather than delving into the meaning behind it",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -142,7 +144,7 @@ const Sensing_vs_Intuition = () => {
     },
     {
       question:
-        "I pay attention to sensory facts about other people more than intuitive patterns",
+        "I pay attention or focus on sensory facts about other people more than intuitive patterns (such as their looks, financial status, possessions..etc)",
       answers: [
         { id: 0, intuition: 5, sensing: 1 },
         { id: 1, intuition: 4, sensing: 2 },
@@ -153,7 +155,7 @@ const Sensing_vs_Intuition = () => {
     },
     {
       question:
-        "I pay attention to intuitive patterns about other people more than sensory facts",
+        "I pay attention or focus on intuitive patterns about other people more than sensory facts (such as their nature, mindset, future, mental behaviors...etc.)",
       answers: [
         { id: 0, intuition: 1, sensing: 5 },
         { id: 1, intuition: 2, sensing: 4 },
