@@ -9,8 +9,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Tests from "./pages/Tests";
 import Profiles from "./pages/Profiles";
-import Sensing_vs_Intuition from "./components/Tests/Sensing_vs_Intuition";
 import Images from "./images";
+// Tests
+import Sensing_vs_Intuition from "./components/Tests/Xxxx-Tests/Sensing_vs_Intuition";
+import Thinking_vs_Feeling from "./components/Tests/Xxxx-Tests/Thinking_vs_Feeling";
+import Extraversion_vs_Introversion from "./components/Tests/Xxxx-Tests/Extraversion_vs_Introversion";
+import Judging_vs_Percieving from "./components/Tests/Xxxx-Tests/Judging_vs_Percieving";
 
 function App() {
   return (
@@ -22,12 +26,25 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/tests" element={<Sensing_vs_Intuition />} />
+          <Route path="/profiles" element={<Profiles />} />
+          <Route path="/tests" element={<Tests />} />
+          {/* Tests */}
           <Route
             path="/sensing_vs_intuition"
             element={<Sensing_vs_Intuition />}
           />
-          <Route path="/profiles" element={<Profiles />} />
+          <Route
+            path="/thinking_vs_feeling"
+            element={<Thinking_vs_Feeling />}
+          />
+          <Route
+            path="/judging_vs_percieving"
+            element={<Judging_vs_Percieving />}
+          />
+          <Route
+            path="/extraversion_vs_introversion"
+            element={<Extraversion_vs_Introversion />}
+          />
         </Routes>
         <Footer />
       </div>

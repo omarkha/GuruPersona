@@ -8,6 +8,7 @@ const Images = {
   brush_stroke: require("./brush-stroke.png"),
   dna1: require("./dna.png"),
   dna2: require("./dna-2.png"),
+  typology: require("./typology.png"),
 };
 
 export default Images;

@@ -27,10 +27,8 @@ const NavBar = () => {
             Profiles
           </Link>
         </li>
-        <li>
-          <SearchBar />
-        </li>
       </ul>
+      <SearchBar />
     </nav>
   );
 };

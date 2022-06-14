@@ -2,20 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const RatingQuestion = (props) => {
-  const name = props.name;
-
-  const [data, setData] = useState({
-    index: 0,
-    value: 0,
-  });
-
+  const [explain, setExplain] = useState(false);
+  let explainStyle = explain ? { display: "block" } : { display: "none" };
   return (
     <div className="question">
       <h3 id="question-number">Statement {props.id + 1}</h3>
       <h3>{props.question}</h3>
 
       <div className="radios">
-        <h6>Disagree</h6>
+        <h6 id="disagree">Disagree</h6>
         <input
           type="radio"
           onClick={(e) => props.getValue(0, e.target.value)}
@@ -51,8 +46,12 @@ const RatingQuestion = (props) => {
           name={props.name}
           value="4"
         />
-        <h6>Agree</h6>
+        <h6 id="agree">Agree</h6>
       </div>
+      <button onClick={() => setExplain(!explain)}>explain</button>
+      <p className="question-explain" style={explainStyle}>
+        {props.explain}
+      </p>
     </div>
   );
 };

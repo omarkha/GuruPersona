@@ -5,23 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(0, 40, 80);
+  background-color: rgb(25, 25, 40);
   background-blend-mode: multiply;
-  font-family: "Bubblegum Sans", cursive;
+  font-family: sans-serif;
   color: rgb(220, 200, 200);
   letter-spacing: 1px;
   word-spacing: 3px;
   animation: body-animate 3.618s ease-in-out;
   z-index: 2;
-}
-
-@keyframes body-animate {
-  from {
-    word-spacing: 34px;
-  }
-  to {
-    word-spacing: 3px;
-  }
+  font-size: 18px;
 }
 
 code {
@@ -92,41 +84,39 @@ code {
 
 header {
   position: relative;
-  background-color: rgb(0, 25, 80);
-  background-image: url("./images/bg-3.png");
+  background-color: rgba(0, 25, 80, 0.62);
+  background-image: url("./images/bg-12.jpg");
+  background-position-y: -200px;
   background-blend-mode: soft-light;
-  padding: 34px;
-  animation: animate-header-bg 1.618s ease-in;
+  padding: 89px 34px;
+  animation: animate-header-bg 3.618s ease-in-out;
   display: grid;
   grid-template-columns: 1fr 4fr;
   margin: 34px 0;
+  border-bottom: 1px solid #fff;
 }
 
 @keyframes animate-header-bg {
   from {
     background-color: rgb(0, 0, 25);
+    background-position-y: -138px;
   }
   to {
-    background-color: rgb(0, 25, 80);
+    background-color: rgba(0, 25, 80, 0.62);
+    background-position-y: -200px;
   }
-}
-
-header img {
-  mix-blend-mode: luminosity;
-  margin-left: 34px;
-  width: 144px;
-  display: inline;
 }
 
 header h1 {
   margin: 21px auto;
   font-size: 89px;
-  color: rgb(0, 0, 40);
+  color: rgb(215, 215, 255);
   font-family: "Electrolize", sans-serif;
   letter-spacing: 21px;
 }
 
 nav {
+  padding: 5px 0 3px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -137,13 +127,16 @@ nav {
   font-family: "Electrolize", sans-serif;
   background-blend-mode: color-burn;
   border-bottom: 2px solid rgb(220, 200, 200);
+  display: flex;
+  flex-direction: row;
 }
 h3 {
-  color: rgb(220, 200, 200);
+  color: rgb(0, 200, 215);
 }
 ul {
   margin: 0;
   padding: 8px;
+  display: inline;
 }
 
 li {
@@ -155,6 +148,9 @@ li {
 .home-services {
   text-align: start;
   position: relative;
+  background-image: url("./images/bg-8.png");
+  background-size: 200%;
+  background-blend-mode: lighten;
 }
 
 .link {
@@ -177,14 +173,15 @@ li {
 */
 
 .searchbar {
-  padding: 13px 0;
-  display: inline;
+  position: fixed;
+  margin: 8px 0 3px 0;
+  right: 21px;
 }
 .searchbar button {
   font-family: "Electrolize", sans-serif;
   background-color: rgba(160, 185, 255, 0.62);
   border-radius: 3px;
-  padding: 1px;
+  padding: 3px;
   font-size: 13px;
 }
 
@@ -193,29 +190,27 @@ li {
   border-radius: 3px;
   width: 144px;
   margin: 0 8px;
+  padding: 3px;
 }
 
-article {
+section {
   margin: 34px auto;
-  width: 80%;
-  border: 1px solid rgb(200, 200, 200);
   background-blend-mode: luminosity;
-  background-color: rgba(0, 0, 40, 0.62);
   background-size: cover;
   background-position-x: -233;
   border-radius: 21px;
   padding: 34px 21px 34px 21px;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 button {
   border: 1px solid rgb(40, 40, 40);
   background-color: rgba(185, 255, 40, 0.62);
-  padding: 13px 8px;
-  color: rgb(40, 40, 40);
+  padding: 5px 8px;
+  color: rgb(0, 0, 40);
   font-family: "Bubblegum Sans", cursive;
   font-size: 21px;
-  border-radius: 13px;
+  border-radius: 5px;
 }
 
 button:active {
@@ -223,19 +218,32 @@ button:active {
 }
 
 .question {
-  background-color: rgba(101, 185, 255, 0.62);
-  width: 61.8%;
-  padding: 1px 21px 34px 34px;
+  background-color: rgba(25, 160, 255, 0.62);
+  border: 3px solid rgb(25, 25, 80);
+  background-size: cover;
+  background-blend-mode: soft-light;
+  width: 86%;
+  padding: 21px 21px 55px 34px;
   margin: 8px auto;
   text-align: start;
   border-radius: 13px;
   word-spacing: 13px;
-  line-height: 55px;
+  grid-column: 1/4;
+  box-shadow: 3px 3px 13px #222;
 }
 
+.question-explain {
+  margin-top: 21px;
+  text-shadow: none;
+}
 .question h3 {
+  font-family: sans-serif;
   color: rgb(0, 25, 63);
-  text-shadow: 3px 3px 13px rgb(0, 0, 25);
+  font-size: 21px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  margin: 55px 0;
 }
 
 .question .radios {
@@ -248,19 +256,32 @@ button:active {
   font-size: 21px;
   display: inline;
   margin: 0 8px;
+  text-shadow: 1px 1px 3px #222;
 }
 
+#disagree {
+  color: rgb(215, 25, 25);
+}
+#agree {
+  color: rgb(63, 215, 63);
+}
 #question-number {
   margin: 21px auto;
-  color: rgb(0, 0, 40);
+  color: rgb(25, 40, 80);
   letter-spacing: 5px;
   font-size: 21px;
+  text-shadow: none;
+  text-decoration: underline;
+}
+
+.buttons {
 }
 
 .buttons button {
   margin: 13px 13px 34px 13px;
-  background-color: rgba(255, 255, 40, 0.62);
+  background-color: rgba(255, 101, 40, 0.86);
   padding: 8px 21px;
+  box-shadow: 3px 3px 5px #222;
 }
 .buttons button:active {
   background-color: rgba(185, 255, 255, 0.62);
@@ -282,32 +303,30 @@ input[type="radio"]:checked::before {
 input[type="radio"]:focus {
   background-color: rgba(255, 185, 40);
 }
-.home-page article {
+.home-page section {
   position: relative;
   margin: 89px auto;
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.62);
+  background-color: rgba(25, 25, 40, 0.62);
   background-size: cover;
   background-position-x: -233;
-  border-radius: 21px;
-  display: grid;
   grid-template-columns: 1fr 5fr;
 }
 
 .background-image {
   z-index: -1;
   left: 0;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: normal;
   width: 61.8%;
   padding: 0;
   margin: 0;
 }
 
-.home-page h1 {
+.home-page h3 {
   margin: 34px;
-  color: rgb(0, 40, 80);
+  color: rgb(25, 25, 101);
   letter-spacing: 5px;
   word-spacing: 13px;
+  font-family: sans-serif;
 }
 
 .home-services {
@@ -319,10 +338,12 @@ input[type="radio"]:focus {
 }
 
 .home-services li {
-  font-size: 18px;
+  font-size: 21px;
   list-style: disc;
   display: block;
   margin: 21px 0;
+  color: rgb(0, 25, 63);
+  font-family: "Josefin Sans", sans-serif;
 }
 .home-services ul {
   font-size: 18px;
@@ -333,45 +354,51 @@ input[type="radio"]:focus {
 
 .checkmark {
   margin: 0 34px;
-  color: rgb(200, 255, 40);
+  color: rgb(101, 215, 40);
 }
 footer {
-  background-color: rgb(0, 0, 40);
+  background-color: rgb(0, 0, 25);
   padding: 21px;
   font-family: "Electrolize", sans-serif;
 }
 
-article p {
+section p {
   line-height: 34px;
   word-spacing: 5px;
   letter-spacing: 0;
   color: rgb(0, 0, 40);
-  font-family: "Josefin Sans", sans-serif;
+  font-family: sans-serif;
   font-size: 21px;
-  text-shadow: 3px 3px 13px rgb(0, 0, 25);
+  text-shadow: 1px 1px 1px rgb(215, 215, 215);
 }
 
-article img {
+section img {
   margin-top: 21px;
   border-radius: 21px;
   mix-blend-mode: normal;
 }
 
-article div {
+section div {
   padding: 0 21px;
   margin: 0;
   background-blend-mode: hard-light;
 }
 
-article h3 {
+section h3 {
   font-family: "Bubblegum Sans", cursive;
   letter-spacing: 8px;
   font-size: 34px;
   color: rgb(0, 40, 80);
+  line-height: 55px;
+  word-spacing: 5px;
 }
 
-header h1,
-header img {
+h4 {
+  color: rgb(25, 40, 101);
+  font-size: 21px;
+}
+
+header h1 {
   opacity: 1;
   animation: animate-heading 3.618s ease-in-out;
 }
@@ -383,6 +410,19 @@ header img {
 
 .home-intro {
   grid-column: 1/3;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: url("./images/bg-8.png");
+  background-size: cover;
+  border-top-right-radius: 21px;
+  border-top-left-radius: 21px;
+}
+
+header img {
+  mix-blend-mode: luminosity;
+  margin-left: 34px;
+  width: 144px;
+  display: inline;
+  animation: animate-logo 3.618s ease-out;
 }
 
 @keyframes animate-heading {
@@ -394,8 +434,16 @@ header img {
   }
 }
 
+@keyframes animate-logo {
+  from {
+    transform: rotate(-200deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 .home-page span {
-  color: rgb(185, 200, 40);
+  color: rgb(25, 63, 215);
 }
 
 .home-page em {
@@ -407,7 +455,7 @@ header img {
   z-index: -1;
   overflow: auto;
   top: 0;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: luminosity;
 }
 
 .home-services h3 {
@@ -418,4 +466,220 @@ header img {
   font-family: "Electrolize", sans-serif;
   word-spacing: 8px;
   letter-spacing: 0;
+}
+.intro-subtitle {
+  color: rgb(0, 0, 25);
+  font-size: 21px;
+  font-family: "Electrolize", sans-serif;
+  word-spacing: 8px;
+  letter-spacing: 0;
+}
+
+.intro-sec2 {
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background-color: rgb(0, 25, 80);
+  background: url("./images/bg-11.jpg");
+  background-size: cover;
+  background-position-x: 50%;
+  background-blend-mode: luminosity;
+  grid-column: 1/3;
+  border-bottom-right-radius: 21px;
+  border-bottom-left-radius: 21px;
+}
+
+.test-section {
+  word-spacing: 1px;
+  width: 86%;
+  background-color: rgba(0, 0, 80, 0.86);
+  background-image: url("./images/bg-15.jpg");
+  background-blend-mode: luminosity;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding: 34px 21px 89px 21px;
+}
+
+.test-section h4 {
+  color: rgb(0, 0, 40);
+  margin: 0;
+}
+.test-section h1 {
+  color: rgb(0, 0, 80);
+  text-decoration: underline;
+  grid-column: 1/5;
+}
+
+.test-section h5 {
+  color: rgb(0, 0, 40);
+  margin: 13px;
+  font-size: 21px;
+}
+
+#o1:focus {
+  background-color: rgb(215, 25, 0);
+}
+
+#o2:focus {
+  background-color: rgb(215, 101, 40);
+}
+
+#o3:focus {
+  background-color: rgb(215, 215, 0);
+}
+
+#o4:focus {
+  background-color: rgb(160, 215, 25);
+}
+
+#o5:focus {
+  background-color: rgb(101, 215, 0);
+}
+
+.newsletter {
+  padding: 55px 34px;
+  grid-template-columns: 1fr 4fr;
+  background-color: rgb(255, 215, 0);
+  justify-self: center;
+  margin: 89px auto;
+  width: 61.8%;
+  border-radius: 21px;
+}
+
+.newsletter input[type="text"] {
+  margin: 13px;
+  padding: 8px 13px;
+  font-size: 21px;
+  width: 336px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.newsletter form {
+  border: 5px dashed rgb(0, 0, 40);
+  padding: 34px 0;
+  display: grid;
+  grid-gap: 34px;
+  text-align: center;
+  justify-content: center;
+}
+
+.newsletter form div input[type="text"] {
+  width: 144px;
+  margin: 0 8px;
+}
+
+.newsletter button {
+  display: block;
+  margin: 0 auto;
+}
+
+.tests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.pagecard {
+  background-color: rgba(25, 25, 101, 0.86);
+  padding: 0;
+  text-align: center;
+  width: 62%;
+  margin: 34px auto;
+  border: 3px dashed rgb(0, 215, 255);
+  justify-self: center;
+}
+
+.pagecard:hover {
+  margin: 34px auto;
+  border: 3px dashed rgb(255, 255, 160);
+  background-color: rgba(0, 25, 101, 0.78);
+  padding: 0;
+  text-align: center;
+}
+
+.pagecard h3 {
+  font-size: 21px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  padding: 3px 13px;
+  color: rgb(40, 185, 255);
+  text-decoration: underline;
+}
+.pagecard p {
+  font-size: 21px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 3px 13px;
+  color: rgb(40, 185, 255);
+}
+.pagecard a {
+  color: rgb(255, 255, 255);
+  padding: 13px;
+  text-decoration: none;
+}
+
+.tests-page section {
+  background-color: rgb(0, 40, 80);
+  border: 1px solid rgb(0, 0, 40);
+  background-image: url("./images/bg-11.jpg");
+
+  background-blend-mode: color-burn;
+  width: 86%;
+}
+
+.tests-page section img {
+  mix-blend-mode: hard-light;
+}
+
+.MBTI-Test {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.MBTI-Test img {
+  left: 0;
+  grid-column: 1/2;
+  width: 62%;
+  border: 1px solid rgb(255, 215, 215);
+  justify-self: start;
+}
+
+.MBTI-Test div {
+  left: 0;
+  grid-column: 2/5;
+}
+
+.MBTI-Test h3 {
+  color: rgb(160, 215, 255);
+}
+
+.MBTI-Test p {
+  color: rgb(40, 160, 255);
+}
+
+.progress-bar {
+  position: relative;
+  border-radius: 3px;
+  border-right: 3px solid rgb(160, 40, 15);
+  border-left: 3px solid rgb(160, 40, 15);
+  height: 13px;
+  background-color: #222;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  justify-self: center;
+}
+.progress-mover {
+  height: 100%;
+  background-color: rgb(220, 220, 15);
+  padding: 0;
+  width: 0;
+  transition: padding 0.62s;
+}
+
+.progress {
+  margin-bottom: 21px;
 }

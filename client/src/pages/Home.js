@@ -2,69 +2,92 @@ import React from "react";
 import Images from "../images/index";
 import { AiFillCheckCircle } from "react-icons/ai";
 import SearchBar from "../components/SearchBar";
+import NewsLetter from "../components/NewsLetter";
+
 const Home = () => {
   return (
     <div className="home-page">
-      <article>
+      <section>
         <div className="home-intro">
           <h3 className="intro-title">
-            Finally Here - A System that Empowers You with Knowledge,
-            Intelligence, Control to Live Happily and Confidently!
+            Finally Here! a Psycholgoical Analysis System that{" "}
+            <u>Empowers You</u> to Live{" "}
+            <u>Happily, Positively and Confidently</u> ever after!
           </h3>
+          <h4 className="intro-subtitle">
+            Improve the quality of life with rare to find Knowledge &
+            Intelligence
+          </h4>
           <img className="background-image" src={Images.lab} />
           <p>
-            The new age of information has arrived. More than ever people can be
-            as successful as they desire. Yet, people are lost. Wandering around
-            aimlessly.
+            Plato once said, "Know Thyself." why? first, let me ask you this.
+            What if you took a bunch of psychology and typology tests and
+            combined them together? you'd have a pretty good grasp of yourself.
+            You now can finally make a portrait of your mind!
             <br />
             <br />
-            You are constantly fighting against life. You gotta have a game
-            plan!
+            But why only stop at understanding how your psyche works? What if
+            you could also understand other people more than they understand
+            themselves? Now, you'd be rolling pretty smooth. wouldn't ya?
+            imagine this...
             <br />
             <br />
-            I know it, you know it. Life can be very stressful, and anxiety
-            inducing... And it can get very difficult very quickly. You struggle
-            with your self-image, confidence, happiness, staying positive..etc.
+            You go to a job interview and they say "tell us about yourself?"
+            Thinking they bamboozled your mind. But jokes on them you already
+            know your strengths and actual positive qualities!
             <br />
             <br />
-            It's easy to crumble in the face of pressure when you don't know
-            what you're doing.
+            You might throw in some weaknesses as a tactic in your overall
+            strategy. Because that's how confident you are. You already know how
+            to manage yourself effectively and efficiently. Well sir "You're...
+            HIRED!"
             <br />
             <br />
-            Introducing Personified.
+            Most people go about life not knowing who they really are. They do
+            somewhat have a grasp of who some other people are. And a lot of
+            people don't understand the world they live in. They struggle with
+            making new friends, enjoying their life and feeling fullfilled.
             <br />
             <br />
-            A Brand New Lifestyle. The ultimate Success System. <br />
-            <br />
-            Where you can employ information to defuse problems. And have a
-            manual for each situation at your disposal whenever you want.
-            <br />
-            <br />
-            The secret to winning is to Know Yourself, first. Before Anything.
-            And that is the first step in my System.
-            <br />
-            <br />
-            What if you can win yourself, win the game of life and make it look
-            easy?! We're here to make you prepared for every situation you
-            encounter. <br />
-            <br />
-            How much More Comfortable, Confident, Happy would you feel if you
-            were to 'Know Thyself'?
-            <br />
-            <br />
-            You'll quickly observe your Development as a person as you ooze with
-            confidence and start to inhale freedom.
-            <br />
-            <br />
-            Your success is my life's purpose. Whether you're new to typology,
-            or a verteran, this website is designed to be your map of the world
-            around you. A toolset you can rely on for improving yourself and
-            winning life's challenges like a pro.
+            But you don't have to struggle. You can now start learning and
+            finding out JAW-DROPPING knowledge that will change YOUR world. the
+            enjoyment you get from the power you recieve will in itself be
+            empowering!
             <br />
             <br />
           </p>
         </div>
-        <img src={Images.lab} />
+
+        <div className="intro-sec2">
+          <h3>Introducing... Personified!</h3>
+          <p>
+            <br />
+            <img src={Images.success} className="background-image" />
+            <br />
+            Personified is a web application that lets you have control over
+            your life. Because Knowledge is Power. And with the knowledge you'll
+            gain you'll be able to make new friends with ease and improve your
+            social intelligence. You should only become an improved version of
+            yourself as time passes. So you can start to feel better about
+            yourself, your life and feel at ease in the world you live in.
+            <br />
+            <br />
+            Recently the Myers Briggs test has hit the interest of the public.
+            MBTI is a personality test curated based on the research of Carl
+            Jung, the infamous psychology pioneer.
+            <br />
+            <br />
+            there are many other personality typing systems out there such as
+            The Enneagram and Socionics. The concept of personified is to
+            combine those personality tests and add to them scientific based
+            psychological analysis systems such as the Big Five test.
+            <br />
+            <br />
+          </p>
+        </div>
+        <div className="intro-sec3">
+          <NewsLetter />
+        </div>
         <div className="home-services">
           <h3>Services</h3>
           <img id="services-background" src={Images.dna2} />
@@ -113,7 +136,7 @@ const Home = () => {
             <li>... and Recieve So Much MORE value!</li>
           </ul>
         </div>
-      </article>
+      </section>
     </div>
   );
 };
